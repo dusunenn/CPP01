@@ -1,10 +1,8 @@
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
-
 #include <iostream>
-#include <HumanB.hpp>
-#include <HumanA.hpp>
+#include <string>
 
 class Weapon
 {
@@ -12,8 +10,10 @@ class Weapon
 private:
     std::string type;
 public:
-    int getType(){}
-    int setType(){}
+    
+    const std::string& getType() const; //const refernce döndür
+    void setType(const std::string& newType);
 };
+
 
 #endif
