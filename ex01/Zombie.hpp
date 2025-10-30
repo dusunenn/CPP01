@@ -21,9 +21,13 @@ private:
     std::string name;
     
 public:
-    Zombie(){};
+    Zombie(){
+        std::cout << "constructor called..." << std::endl;
+    };
 
-    ~Zombie(){};
+    ~Zombie(){
+        std::cout << "destructor called..." << std::endl;
+    };
 
     void announce();
     void set_name(std::string name);
