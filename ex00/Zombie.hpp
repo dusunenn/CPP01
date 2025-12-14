@@ -22,8 +22,12 @@ private:
 	std::string name;
 
 public:
-	Zombie(std::string n) : name(n) {}
-	~Zombie() {}
+	Zombie(std::string n) : name(n) {
+		std::cout << "constructor called." << std::endl;
+	}
+	~Zombie() {
+		std::cout << "destructor called." << std::endl;
+	}
 	void announce(void);
 };
 
