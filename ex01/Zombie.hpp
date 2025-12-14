@@ -1,38 +1,37 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 18:41:02 by mdusunen          #+#    #+#             */
-/*   Updated: 2025/10/24 19:41:46 by mdusunen         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <iostream>
-#include <string>
+# include <iostream>
+# include <string>
 
-class Zombie {
-private:
-    std::string name;
-    
-public:
-    Zombie(){
-        std::cout << "constructor called..." << std::endl;
-    };
+class Zombie
+{
+	private:
+		std::string _name; // Zombinin ismini tutan private değişken [cite: 126]
 
-    ~Zombie(){
-        std::cout << "destructor called..." << std::endl;
-    };
+	public:
+		// Varsayılan Yapıcı (Default Constructor)
+		// Dizi oluştururken (new Zombie[N]) bu yapıcı çağrılır.
+		Zombie(){
+            std::cout << "constructor called." << std::endl;
+        };
 
-    void announce();
-    void set_name(std::string name);
+		// Yıkıcı (Destructor)
+		// Zombi yok edildiğinde mesaj yazdırmak için [cite: 137]
+		~Zombie(){
+            std::cout << "destructor called." << std::endl;
+        };
+
+		// Üye Fonksiyonlar
+		void announce( void ); // Kendini duyurma fonksiyonu [cite: 127]
+		
+		// Setter
+		// Dizi oluşturulduktan sonra isim vermek için buna ihtiyacınız var.
+		void setName( std::string name );
 };
 
-Zombie* zombieHorde(int N, std::string name);
+// zombieHorde fonksiyon prototipi
+// Bu fonksiyon main tarafından çağrılacağı için burada tanımlanması mantıklıdır.
+Zombie* zombieHorde( int N, std::string name );
 
 #endif
