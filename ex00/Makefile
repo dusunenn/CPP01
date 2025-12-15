@@ -1,14 +1,14 @@
 NAME = CPP1
-cc = c++
-CFLAGS = -Wall -Wextra -Werror -std=c++98
-src = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 obj = $(SRCS:.cpp=.o)
 
 all : $(NAME)
-$(NAME) : $(src)
-	$(cc) $(CFLAGS) $(src) -o $(NAME)
+$(NAME) : $(SRC)
+	$(CXX) $(CXXFLAGS) $(SRC) -o $(NAME)
 %.o: %.cpp
-	$(cc) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 clean:
 	rm -rf $(OBJS)
 

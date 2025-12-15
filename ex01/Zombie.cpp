@@ -6,12 +6,22 @@
 /*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/27 18:42:45 by mdusunen          #+#    #+#             */
-/*   Updated: 2025/10/24 19:17:39 by mdusunen         ###   ########.fr       */
+/*   Updated: 2025/12/15 16:35:16 by mdusunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Zombie.hpp"
+
+Zombie::Zombie()
+{
+	std::cout << "constructor called." << std::endl;
+}
+
+Zombie::~Zombie()
+{
+	std::cout << "destructor called." << std::endl;
+}
 
 void Zombie::announce()
 {

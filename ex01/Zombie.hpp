@@ -12,15 +12,11 @@ class Zombie
 	public:
 		// Varsayılan Yapıcı (Default Constructor)
 		// Dizi oluştururken (new Zombie[N]) bu yapıcı çağrılır.
-		Zombie(){
-            std::cout << "constructor called." << std::endl;
-        };
+		Zombie();
 
 		// Yıkıcı (Destructor)
 		// Zombi yok edildiğinde mesaj yazdırmak için [cite: 137]
-		~Zombie(){
-            std::cout << "destructor called." << std::endl;
-        };
+		~Zombie();
 
 		// Üye Fonksiyonlar
 		void announce( void ); // Kendini duyurma fonksiyonu [cite: 127]
