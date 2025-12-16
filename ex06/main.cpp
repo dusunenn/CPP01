@@ -2,23 +2,42 @@
 #include <string>
 #include "Harl.hpp"
 
-
 int main(int ac, char **av)
 {
-    (void)av;
-    if (ac == 1)
+    int levelIndex ;
+    Harl harl;
+    if (ac == 2)
     {
-        std::cerr <<  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!" << std::endl;
-        return(0);
+        levelIndex = atoi(av[1]);
+        switch (levelIndex)
+        {
+        case 1:
+            harl.complain("DEBUG");
+            // fall through
+        case 2:
+            harl.complain("INFO");
+            // fall through
+        case 3:
+            harl.complain("WARNING");
+            // fall through
+        case 4:
+            harl.complain("ERROR");
+            break;  
+        default:
+            std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+            std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+            std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+            std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+            std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+            break;
+        }
     }
-    switch (av[2])
-    {
-    case :
-        /* code */
-        break;
-    
-    default:
-        break;
+    else{
+        std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+        std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+        std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+        std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
+        std::cout << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" << std::endl;
     }
     return 0;
 }

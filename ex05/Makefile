@@ -1,4 +1,4 @@
-NAME = CPP1
+NAME = Harl
 cc = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 src = main.cpp Harl.cpp
