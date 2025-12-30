@@ -6,14 +6,15 @@
 
 class Weapon
 {
+    private:
+        std::string _type;
 
-private:
-    std::string type;
-public:
-    
-    const std::string& getType() const; //const refernce döndür
-    void setType(const std::string& newType);
+    public:
+        Weapon(std::string type);
+        ~Weapon();
+
+        const std::string&  getType(void) const;
+        void                setType(std::string newType);
 };
-
 
 #endif

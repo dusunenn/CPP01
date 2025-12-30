@@ -1,6 +1,30 @@
 #include "HumanB.hpp"
-#include "Weapon.hpp"
 
-void HumanB:: attack(){
-    std::cout << name << " attack with their" << weapon->getType() << std::endl;
+HumanB::HumanB(std::string name) : name(name)
+{
+    this->weapon = NULL; // Başlangıçta silahı yok.
+}
+
+HumanB::~HumanB()
+{
+}
+
+// Gelen referansın ADRESİNİ (& operatörü ile) alıp pointer'a atıyoruz.
+void HumanB::setWeapon(Weapon& weapon)
+{
+    this->weapon = &weapon;
+}
+
+void HumanB::attack(void)
+{
+    // Silahı var mı kontrolü yapmak iyi bir pratiktir (Segfault önler)
+    if (this->weapon != NULL)
+    {
+        // Pointer olduğu için "->" operatörü kullanılır
+        std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+    }
+    else
+    {
+        std::cout << this->name << " has no weapon!" << std::endl;
+    }
 }

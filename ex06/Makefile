@@ -1,12 +1,12 @@
 NAME = Harl
 cc = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-src = main.cpp Harl.cpp
-obj = $(src:.cpp=.o)
+SRCS = main.cpp Harl.cpp
+OBJS = $(SRCS:.cpp=.o)
 
 all : $(NAME)
-$(NAME) : $(src)
-	$(cc) $(CXXFLAGS) $(src) -o $(NAME)
+$(NAME) : $(SRCS)
+	$(cc) $(CXXFLAGS) $(SRCS) -o $(NAME)
 %.o: %.cpp
 	$(cc) $(CXXFLAGS) -c $< -o $@
 clean:

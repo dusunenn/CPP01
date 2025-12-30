@@ -27,7 +27,13 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-    std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+    std::string levels[] = {
+        "DEBUG",
+        "INFO",
+        "WARNING",
+        "ERROR"
+    };
+
     void (Harl::*functions[])() = {
         &Harl::debug,
         &Harl::info,
@@ -37,7 +43,7 @@ void Harl::complain(std::string level)
 
     for (size_t i = 0; i < 4; i++)
     {
-        if (level == levels[i])
+        if (levels[i] == level)
         {
             (this->*functions[i])();
             break;

@@ -15,20 +15,17 @@
 
 #include <iostream>
 #include <string>
-#include "Zombie.hpp"
+
 class Zombie
 {
 private:
-	std::string name;
+	std::string _name;
 
 public:
-	Zombie(std::string n) : name(n) {
-		std::cout << "constructor called." << std::endl;
-	}
-	~Zombie() {
-		std::cout << "destructor called." << std::endl;
-	}
-	void announce(void);
+	Zombie(std::string name);
+	~Zombie();
+
+	void announce();
 };
 
 Zombie *newZombie(std::string name);

@@ -12,7 +12,7 @@
 
 #include "Zombie.hpp"
 
-Zombie *zombieHorde(int N, std::string name)
+Zombie* zombieHorde(int N, std::string name)
 {
     Zombie* horde = new Zombie[N];
 
@@ -20,6 +20,5 @@ Zombie *zombieHorde(int N, std::string name)
     {
         horde[i].setName(name);
     }
-    
     return horde; 
 }

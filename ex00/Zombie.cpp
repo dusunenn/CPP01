@@ -13,7 +13,17 @@
 #include <iostream>
 #include "Zombie.hpp"
 
+Zombie::Zombie(std::string name) : _name(name) {
+	std::cout << this->_name << " constructor called." << std::endl;
+    // İsteğe bağlı: Oluşturulduğunda mesaj basabilirsin ama zorunlu değil.
+}
+
+Zombie::~Zombie() {
+    // Zombi yok edildiğinde bu çalışır.
+    std::cout << this->_name << " is destroyed." << std::endl; // 
+}
+
 void Zombie::announce()
 {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

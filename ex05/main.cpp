@@ -3,18 +3,13 @@
 #include "Harl.hpp"
 
 
-int main(int ac, char **av)
+int main()
 {
-    (void)av;
-    if (ac == 1)
-    {
-        std::cerr <<  "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!" << std::endl;
-        return(0);
-    }
     Harl Harl;
     Harl.complain("DEBUG");
     Harl.complain("INFO");
     Harl.complain("WARNING");
     Harl.complain("ERROR");
+    Harl.complain("AAAAAAAAAAAAAA--AAA-A-A-A-A-A-A-A-A-A-A-A!!!!!!!!!");
     return 0;
 }

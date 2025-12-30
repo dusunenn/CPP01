@@ -11,16 +11,15 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#define NUM_ZOMBIES 7
 
 int	main()
 {
-	Zombie	*horde;
-	int		zombieAmount = 5;
+	Zombie	*horde = zombieHorde(NUM_ZOMBIES, "Horde Member");;
 
-	horde = zombieHorde(zombieAmount, "Horde Member");
 	if (horde == NULL)
 		return (1);
-	for (int i = 0; i < zombieAmount; ++i)
+	for (int i = 0; i < NUM_ZOMBIES; ++i)
 		horde[i].announce();
 	delete[] horde;
 	return (1);

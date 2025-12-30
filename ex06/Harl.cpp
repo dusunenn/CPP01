@@ -25,22 +25,21 @@ void Harl::error(void)
     std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void Harl::complain(std::string level)
+void    Harl::complain(std::string level)
 {
-    std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    void (Harl::*functions[])() = {
-        &Harl::debug,
-        &Harl::info,
-        &Harl::warning,
-        &Harl::error
-    };
+    // Seviyeler ve fonksiyon adresleri
+    std::string levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+    
+    // Fonksiyon işaretçisi (Pointer to member function)
+    void (Harl::*ptr[4])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
 
-    for (size_t i = 0; i < 4; i++)
+    // Eşleşeni bul ve çalıştır
+    for (int i = 0; i < 4; i++)
     {
-        if (level == levels[i])
+        if (levels[i] == level)
         {
-            (this->*functions[i])();
-            break;
+            (this->*ptr[i])();
+            return;
         }
     }
 }

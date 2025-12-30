@@ -19,6 +19,7 @@ private:
 
 public:
     HumanA(std::string name, Weapon& weapon);  // Constructor'da weapon alır
+    ~HumanA();
     void attack();
 };
 
