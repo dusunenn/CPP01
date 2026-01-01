@@ -1,9 +1,14 @@
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : name(name)
+HumanB::HumanB(std::string name)
 {
+    this->name = name;
     this->weapon = NULL; // Başlangıçta silahı yok.
 }
+
+// HumanB::HumanB(std::string name): name(name), weapon(NULL)
+// {
+// }
 
 HumanB::~HumanB()
 {
