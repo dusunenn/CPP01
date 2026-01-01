@@ -23,8 +23,9 @@ int main(int ac, char **av)
         std::cout<<"Strings must not be empty"<<std::endl;
         return 1;
     }
-
-    //.c_str() metodunu kullanarak std::string'i const char*'a çevirmek gerekiyor
+    // C++98 standardında .open() fonksiyonu parametre olarak std::string kabul etmez, char* ister.
+    // Bu yüzden dosya ismini verirken filename.c_str() kullanman gerekebilir.
+    // .c_str() metodunu kullanarak std::string'i const char*'a çevirmek gerekiyor
     std::string outFileName = std::string(av[1]) + ".replace";
     std::ofstream outfile(outFileName.c_str()); //yeni dosya oluşturma
 
