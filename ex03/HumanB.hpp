@@ -1,15 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/02 16:53:32 by mdusunen          #+#    #+#             */
+/*   Updated: 2026/01/02 16:54:19 by mdusunen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
 
 #include "Weapon.hpp"
 #include <string>
-
-//constructor 'da silah olmaz
-//Bazen silahı olmayabilir;
-//Pointer kullanılmalı(Çünkü NULL olabilir);
-//Pointer'lar "*" ile tanımlanır
-//NULL olabilir(bir şeyi göstermeyeblir);
-//Sonradan başka bir nesneyi gösterecek sekilde değiştirilebilir;
 
 class HumanB{
 private:

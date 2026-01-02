@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/02 16:53:28 by mdusunen          #+#    #+#             */
+/*   Updated: 2026/01/02 16:54:16 by mdusunen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef HUMANA_HPP
 #define HUMANA_HPP
 
@@ -5,20 +17,13 @@
 #include <string>
 
 
-//Constructor'da silah olmalı;
-//Her zamansilahı olmalı;
-//Referans kullanılmalı(çünkü her zaman silahı var.);
-//Referanslar "&" ile tanımlanır ve asla NULL olamaz
-//Referanslar tanımlanırken değeri olmalı;
-
 class HumanA
 {
 private:
     std::string name;
-    Weapon& weapon;  // REFERENCE - & işaretine dikkat!
-
+    Weapon& weapon;
 public:
-    HumanA(std::string name, Weapon& weapon);  // Constructor'da weapon alır
+    HumanA(std::string name, Weapon& weapon);
     ~HumanA();
     void attack();
 };

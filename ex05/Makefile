@@ -2,7 +2,7 @@ NAME = Harl
 cc = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 src = main.cpp Harl.cpp
-obj = $(src:.cpp=.o)
+OBJS = $(src:.cpp=.o)
 
 all : $(NAME)
 $(NAME) : $(src)

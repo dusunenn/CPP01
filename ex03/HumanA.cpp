@@ -1,7 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/02 16:53:25 by mdusunen          #+#    #+#             */
+/*   Updated: 2026/01/02 16:54:15 by mdusunen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "HumanA.hpp"
 
-// DİKKAT: _weapon(weapon) kısmı Initialization List'tir. 
-// Referanslar bu şekilde başlatılmak ZORUNDADIR.
 HumanA::HumanA(std::string name, Weapon& weapon) : name(name), weapon(weapon)
 {
 }

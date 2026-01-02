@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/02 16:53:47 by mdusunen          #+#    #+#             */
+/*   Updated: 2026/01/02 16:53:48 by mdusunen         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Harl.hpp"
 
 
@@ -27,13 +39,9 @@ void Harl::error(void)
 
 void    Harl::complain(std::string level)
 {
-    // Seviyeler ve fonksiyon adresleri
     std::string levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
-    
-    // Fonksiyon işaretçisi (Pointer to member function)
     void (Harl::*ptr[4])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
 
-    // Eşleşeni bul ve çalıştır
     for (int i = 0; i < 4; i++)
     {
         if (levels[i] == level)
