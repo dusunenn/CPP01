@@ -6,7 +6,7 @@
 /*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 16:53:45 by mdusunen          #+#    #+#             */
-/*   Updated: 2026/01/02 16:53:46 by mdusunen         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:18:56 by mdusunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,5 @@ int main()
     Harl.complain("INFO");
     Harl.complain("WARNING");
     Harl.complain("ERROR");
-    Harl.complain("AAAAAAAAAAAAAA--AAA-A-A-A-A-A-A-A-A-A-A-A!!!!!!!!!");
     return 0;
 }

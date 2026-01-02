@@ -6,7 +6,7 @@
 /*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 16:53:30 by mdusunen          #+#    #+#             */
-/*   Updated: 2026/01/02 16:54:17 by mdusunen         ###   ########.fr       */
+/*   Updated: 2026/01/02 16:59:35 by mdusunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 HumanB::HumanB(std::string name)
 {
     this->name = name;
-    this->weapon = NULL; // Başlangıçta silahı yok.
+    this->weapon = NULL;
 }
 
 HumanB::~HumanB()

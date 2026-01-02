@@ -6,7 +6,7 @@
 /*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 16:53:50 by mdusunen          #+#    #+#             */
-/*   Updated: 2026/01/02 16:53:51 by mdusunen         ###   ########.fr       */
+/*   Updated: 2026/01/02 20:12:45 by mdusunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,12 @@ int main(int argc, char **argv)
         case 0:
             harl.complain("DEBUG");
             std::cout << std::endl;
-            // fall through
         case 1:
             harl.complain("INFO");
             std::cout << std::endl;
-            // fall through
         case 2:
             harl.complain("WARNING");
             std::cout << std::endl;
-            // fall through
         case 3:
             harl.complain("ERROR");
             std::cout << std::endl;

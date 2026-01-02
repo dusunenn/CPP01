@@ -6,13 +6,13 @@
 /*   By: mdusunen <mdusunen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/02 16:53:36 by mdusunen          #+#    #+#             */
-/*   Updated: 2026/01/02 16:54:22 by mdusunen         ###   ########.fr       */
+/*   Updated: 2026/01/02 17:00:50 by mdusunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type) : type(type)
+Weapon::Weapon(const std::string type) : type(type)
 {
 }
 
